@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="893.0" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.branchEmployee.BranchEmployeeController">
+	<children>
+		<AnchorPane layoutX="-8.0" layoutY="-12.0" minHeight="0.0" minWidth="0.0" prefHeight="708.0" prefWidth="188.0" style="-fx-background-color: #4f8255;">
+			<children>
+				<Text fill="#fffdc5" layoutX="22.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee's Portal" textAlignment="CENTER" underline="true">
+					<font>
+						<Font name="Baskerville Old Face" size="20.0" />
+					</font>
+				</Text>
+            <ImageView fitHeight="344.0" fitWidth="188.0" layoutX="5.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/flower.png" />
+               </image></ImageView>
+            <Label fx:id="welcome" layoutX="39.0" layoutY="57.0" prefHeight="21.0" prefWidth="85.0" style="-fx-text-fill: #fffdc5;">
+               <font>
+                  <Font name="Baskerville Old Face" size="18.0" />
+               </font>
+            </Label>
+		
+			</children>
+		</AnchorPane>
+				<BorderPane layoutX="180.0" prefHeight="694.0" prefWidth="715.0" style="-fx-background-color: white;">
+					<top>
+            <Pane prefHeight="60.0" prefWidth="586.0" BorderPane.alignment="CENTER">
+               <children>
+								<MenuButton fx:id="menuBtn" contentDisplay="TEXT_ONLY" layoutX="558.0" layoutY="15.0" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #5f8c64; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #5f8c64;" stylesheets="@../../style.css" text="Menu" textFill="WHITE" translateX="70.0">
+									<items>
+										<MenuItem fx:id="logoutBtn" mnemonicParsing="false" onAction="#logOut_click" text="Logout" />
+									</items>
+                     <font>
+                        <Font name="Baskerville Old Face" size="14.0" />
+                     </font>
+								</MenuButton>
+                  <Separator layoutY="57.0" prefHeight="0.0" prefWidth="715.0" />
+                  <Text fill="#38593b" fontSmoothingType="LCD" layoutX="269.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch Surveys" textAlignment="CENTER" wrappingWidth="177.4603056013584">
+                     <font>
+                        <Font name="Baskerville Old Face" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Pane>
+					</top>
+          <Separator layoutX="11.0" layoutY="126.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="3.0" />
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="Survey_pane" alignment="CENTER_LEFT" layoutX="21.0" layoutY="178.0" prefHeight="445.0" prefWidth="513.0" spacing="26.4" style="-fx-border-color: green; -fx-border-radius: 5;" visible="false">
+                     <children>
+                        <Pane prefHeight="0.0" prefWidth="508.0">
+                           <children>
+                              <Text fill="#38593b" fontSmoothingType="LCD" layoutY="-5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Survey Rating" textAlignment="CENTER" wrappingWidth="457.640625">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="24.0" />
+                                 </font>
+                              </Text>
+                              <Label layoutX="333.0" layoutY="8.0" text="(Rate from 1 to 10)">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="-15.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </Pane>
+                        <HBox spacing="3.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/greenStar.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="Q1" prefHeight="18.0" prefWidth="328.0" text="How well does our product meet your needs?" textFill="#405f44" underline="true">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="S1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="57.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="116.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/greenStar.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text fx:id="Q2" fill="#405f44" strokeType="OUTSIDE" strokeWidth="0.0" text="How would you rate the value for the money of the product?" underline="true" wrappingWidth="324.5732421875">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Spinner fx:id="S2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="57.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="152.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/greenStar.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text fx:id="Q3" fill="#405f44" strokeType="OUTSIDE" strokeWidth="0.0" text="How easy is it to navigate our website?" underline="true" wrappingWidth="324.5732421875">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Spinner fx:id="S3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="57.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="182.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/greenStar.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text fx:id="Q4" fill="#405f44" strokeType="OUTSIDE" strokeWidth="0.0" text="How responsive have we been to your questions or concerns about our products?" underline="true" wrappingWidth="324.5732421875">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Spinner fx:id="S4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="57.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="232.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/greenStar.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text fx:id="Q5" fill="#405f44" strokeType="OUTSIDE" strokeWidth="0.0" text="How likely are you to recommend our company to a friend or colleague?" underline="true" wrappingWidth="324.5732421875">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Spinner fx:id="S5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="57.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="292.0" spacing="3.0">
+                           <children>
+                              <ImageView fitHeight="18.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/greenStar.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                                 <HBox.margin>
+                                    <Insets top="2.5" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text fx:id="Q6" fill="#405f44" strokeType="OUTSIDE" strokeWidth="0.0" text="How likely are you to buy again from us?" underline="true" wrappingWidth="324.5732421875">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Spinner fx:id="S6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="26.0" prefWidth="57.0">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="empty_error" layoutX="127.0" layoutY="5.0" style="-fx-text-fill: red;" text="Please fill the survey!" visible="false">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="SentSuccessfully" layoutX="113.0" layoutY="4.0" style="-fx-text-fill: #405f44;" text="Survey sent to server successfully!" textAlignment="CENTER" visible="false">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="Submit" layoutX="378.0" layoutY="-3.0" mnemonicParsing="false" onAction="#Submit" prefHeight="22.0" prefWidth="78.0" style="-fx-background-radius: 10; -fx-text-fill: white; -fx-background-color: #5f8c64;" stylesheets="@../../style.css" text="Submit">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="restart_button" layoutX="9.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="72.0" minWidth="30.0" mnemonicParsing="false" onAction="#restart" prefHeight="32.0" prefWidth="41.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/restart.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" top="30.0" />
+                     </padding>
+                  </VBox>
+                  <TableView fx:id="SurveyTable" layoutX="-1.0" layoutY="-5.0" prefHeight="174.0" prefWidth="715.0">
+                    <columns>
+                        <TableColumn fx:id="SurveyId_column" prefWidth="73.0" text="SurveyID" />
+                        <TableColumn fx:id="SurveyDurations_culmn" minWidth="0.0" prefWidth="228.0" text="Survey Duratoins" />
+                      <TableColumn fx:id="Product_column" prefWidth="138.0" text="Product ID" />
+                        <TableColumn fx:id="Dates_Column" minWidth="0.0" prefWidth="249.0" styleClass="tex" text="Custumer bought between dates" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="OpenSurvey_btn" layoutX="550.0" layoutY="169.0" mnemonicParsing="false" onAction="#OpenSurvey" prefHeight="31.0" prefWidth="151.0" text="Open Survey" />
+                  <Label fx:id="SelectItem_error" alignment="CENTER" layoutX="30.0" layoutY="329.0" prefHeight="46.0" prefWidth="629.0" style="-fx-text-fill: red; -fx-background-color: White+gray;" text="Please Select Survey" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+				</BorderPane>
+	</children>
+</Pane>

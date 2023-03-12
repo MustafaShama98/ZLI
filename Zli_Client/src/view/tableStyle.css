@@ -1,0 +1,24 @@
+.button:hover{
+    
+    
+  
+	 -fx-underline : true;
+	 -fx-background-color :  #376f3d !important;
+	 -fx-text-fill :#fffdc5;
+	 
+}
+
+
+.button:focused{
+   -fx-border-width :  2.6px !important;
+  
+	-fx-background-color :  #5f8c64 !important;
+	-fx-text-fill :#fffdc5;
+}
+
+.text {
+	
+}
+.table-view .column-header {
+    -fx-background-color: #376f3d;
+}

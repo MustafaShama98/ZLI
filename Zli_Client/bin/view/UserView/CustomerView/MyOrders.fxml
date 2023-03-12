@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.customer.MyOrdersController">
+	<children>
+		<AnchorPane layoutX="-16.0" minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="154.0" style="-fx-background-color: #4f8255;">
+			<children>
+				<ImageView fitHeight="225.0" fitWidth="112.0" layoutX="23.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../../../images/flower.png" />
+					</image>
+				</ImageView>
+				<Button fx:id="Cancle_Btn" layoutX="19.0" layoutY="117.0" mnemonicParsing="false" onAction="#selectCancle" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-border-width: 1.5; -fx-background-radius: 20; -fx-border-radius: 2030; -fx-border-color: #fffdc5;" stylesheets="@../../style.css" text="Cancel" textFill="#fffdc5">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</Button>
+            <Label fx:id="Cancellation" layoutX="30.0" layoutY="86.0" prefHeight="17.0" prefWidth="112.0" text="Cancellation failed!" textFill="#c61111" visible="false" />
+            <Label fx:id="CancellationSucceeded" layoutX="19.0" layoutY="86.0" prefHeight="17.0" prefWidth="128.0" text="Cancellation succeeded!" textFill="#c61111" visible="false" />
+            <Label fx:id="selectOrder" layoutX="19.0" layoutY="86.0" prefHeight="17.0" prefWidth="147.0" text="Select an order to cancel it!" textFill="#c61111" visible="false" />
+			</children>
+		</AnchorPane>
+      <BorderPane layoutX="138.0" layoutY="1.0" prefHeight="426.0" prefWidth="675.0">
+         <top>
+            <ButtonBar prefHeight="63.0" prefWidth="584.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button fx:id="BackBtn" maxWidth="-Infinity" minWidth="10.0" mnemonicParsing="false" onAction="#ClickBack" prefHeight="30.0" prefWidth="22.0" style="-fx-background-color: transparent;" textFill="WHITE" translateX="-299.0">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="#4f8255" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Orders " translateX="-250.0">
+                     <font>
+                        <Font name="Bookman Old Style" size="29.0" />
+                     </font>
+                  </Text>
+              </buttons>
+            </ButtonBar>
+         </top>
+         <center>
+            <TableView fx:id="MyOrdersTable" prefHeight="407.0" prefWidth="675.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="OrderNumID" prefWidth="31.0" text="N.O" />
+                <TableColumn fx:id="DetailsID" prefWidth="160.0" text="Details" />
+                  <TableColumn fx:id="TotalPriceID" prefWidth="70.0" text="TotalPrice" />
+                  <TableColumn fx:id="ActivityID" prefWidth="96.0" text="Activity" />
+                  <TableColumn fx:id="StatusID" minWidth="0.0" prefWidth="73.0" text="Status" />
+                  <TableColumn fx:id="OrderDateID" minWidth="0.0" prefWidth="81.0" text="OrderDate" />
+                  <TableColumn fx:id="ReceivedDateID" minWidth="9.0" prefWidth="88.0" text="ReceivedDate" />
+                  <TableColumn fx:id="SupplyTypeID" minWidth="0.0" prefWidth="73.0" text="SupplyType" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+	</children>
+</Pane>

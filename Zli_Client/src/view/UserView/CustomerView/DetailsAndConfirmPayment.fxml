@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.customer.DetailsController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="152.0" style="-fx-background-color: #4f8255;">
+         <children>
+            <ImageView fitHeight="230.0" fitWidth="146.0" layoutX="7.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/flower.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="204.0" prefHeight="400.0" prefWidth="398.0">
+         <children>
+            <BorderPane layoutX="-7.0" prefHeight="400.0" prefWidth="405.0">
+               <top>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <buttons>
+                      <Button fx:id="backBtn" mnemonicParsing="false" onAction="#Click_Back" style="-fx-background-radius: 10; -fx-border-color: #4f8255; -fx-border-radius: 10;" textFill="#4f8255" translateX="-70.0">
+                           <graphic>
+                              <ImageView fitHeight="17.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Text fill="#4f8255" strokeType="OUTSIDE" strokeWidth="0.0" text="Details Of Your Order" translateX="-40.0" underline="true">
+                           <font>
+                              <Font name="Baskerville Old Face" size="20.0" />
+                           </font></Text>
+                    </buttons>
+                  </ButtonBar>
+               </top>
+               <center>
+                  <Pane prefHeight="360.0" prefWidth="423.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane fx:id="OK_thankyou" layoutX="-45.0" prefHeight="362.0" prefWidth="450.0" visible="false">
+                           <children>
+                              <Pane fx:id="Ordar_Details" layoutX="10.0" layoutY="49.0" prefHeight="138.0" prefWidth="338.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;">
+                                 <children>
+                                    <VBox fx:id="vbox_orderDetails" prefHeight="136.0" prefWidth="337.0" />
+                                    <Text fill="#4f8255" layoutX="350.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Price:" underline="true" />
+                                    <Label fx:id="Order_Price" layoutX="369.0" layoutY="18.0" prefHeight="19.0" prefWidth="56.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;" text="      0.0" textFill="#4f8255" />
+                                 </children>
+                              </Pane>
+                              <Text fill="#4f8255" layoutX="19.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Order Details">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="14.0" />
+                                 </font></Text>
+                              <Label fx:id="Total_Price" layoutX="376.0" layoutY="108.0" prefHeight="19.0" prefWidth="58.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;" text="0.0" textFill="#4f8255" />
+                              <Text fill="#4f8255" layoutX="359.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price:" underline="true" />
+                              <Button fx:id="Confirm" layoutX="367.0" layoutY="156.0" mnemonicParsing="false" onAction="#Click_Confirm" prefHeight="27.0" prefWidth="68.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;" text="Confirm" textFill="#4f8255" />
+                              <Label fx:id="Thank_label" layoutX="111.0" layoutY="223.0" prefHeight="111.0" prefWidth="212.0" textFill="#4f8255">
+                                 <graphic>
+                                    <Text fill="#4f8255" strokeType="OUTSIDE" strokeWidth="0.0" text="We so glad to see you again Thank You :)" textAlignment="CENTER" wrappingWidth="212.07421875">
+                                       <font>
+                                          <Font name="Baskerville Old Face" size="18.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="rootPane" layoutX="-45.0" prefHeight="360.0" prefWidth="450.0">
+                           <children>
+                              <CheckBox fx:id="DeliveryId" layoutX="22.0" layoutY="48.0" mnemonicParsing="false" onAction="#Click_Delivery" text="Delivery" textFill="#4f8255" />
+                              <Pane layoutX="215.0" layoutY="38.0" prefHeight="144.0" prefWidth="225.0">
+                                 <children>
+                                    <ChoiceBox fx:id="ChooseBranch" layoutX="22.0" layoutY="43.0" prefHeight="27.0" prefWidth="85.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <DatePicker fx:id="SetDate" layoutX="133.0" layoutY="44.0" prefHeight="27.0" prefWidth="79.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10; -fx-background-radius: 20;" />
+                                    <TextField fx:id="SetTime" layoutX="24.0" layoutY="104.0" prefHeight="27.0" prefWidth="83.0" promptText="00:00:00" style="-fx-border-color: #4f8255; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <Text fill="#4f8255" layoutX="23.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Branch:" />
+                                    <Text fill="#4f8255" layoutX="133.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Date:" />
+                                    <Text fill="#4f8255" layoutX="26.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Time:" />
+                                    <Button layoutX="165.0" layoutY="102.0" mnemonicParsing="false" onAction="#Done_BranchDetails" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #4f8255;" text="Done" textFill="#4f8255" />
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="DeliveryPane" layoutX="7.0" layoutY="86.0" prefHeight="268.0" prefWidth="200.0" visible="false">
+                                 <children>
+                                    <CheckBox fx:id="Express" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#Click_Express" text="Express Shipping" textFill="#4f8255" />
+                                    <Text fill="RED" layoutX="102.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Cost:20$" wrappingWidth="94.0845947265625" />
+                                    <TextField fx:id="Name" layoutX="26.0" layoutY="69.0" promptText="Full Name" style="-fx-background-radius: 10; -fx-border-color: #4f8255; -fx-border-radius: 10;" />
+                                    <TextField fx:id="Address" layoutX="26.0" layoutY="125.0" promptText="City , Stress  " style="-fx-background-radius: 10; -fx-border-color: #4f8255; -fx-border-radius: 10;" />
+                                    <TextField fx:id="PhoneNumber" layoutX="26.0" layoutY="183.0" promptText="000-000-0000" style="-fx-border-color: #4f8255; -fx-border-radius: 10; -fx-background-radius: 10;" />
+                                    <Button fx:id="Done_Delivery" layoutX="77.0" layoutY="226.0" mnemonicParsing="false" onAction="#Done_Delivery_Click" style="-fx-background-radius: 10; -fx-border-color: #4f8255; -fx-border-radius: 10;" text="Done" textFill="#4f8255" />
+                                    <Text fill="#4f8255" layoutX="26.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+                                    <Text fill="#4f8255" layoutX="26.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                                    <Text fill="#4f8255" layoutX="29.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Addess Phone:" />
+                                 </children>
+                              </Pane>
+                              <Label fx:id="FirstOrder" layoutX="22.0" layoutY="21.0" prefHeight="17.0" prefWidth="262.0" text="This is your first order ,you have discount 20% :)" textFill="RED" visible="false" />
+                              <Button fx:id="PaymentClick" layoutX="288.0" layoutY="313.0" mnemonicParsing="false" onAction="#Payment_Click" style="-fx-border-color: #4f8255; -fx-border-radius: 10; -fx-background-radius: 10;" text="Payment" textFill="#4f8255" />
+                              <Separator layoutX="204.0" layoutY="56.0" orientation="VERTICAL" prefHeight="295.0" prefWidth="5.0" />
+                              <Text fill="#4f8255" layoutX="226.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch_Discount:" underline="true" wrappingWidth="92.498046875" />
+                              <Text fill="#4f8255" layoutX="290.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery:" underline="true" />
+                              <Text fill="#4f8255" layoutX="339.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FirstOrderDiscount:" underline="true" />
+                              <Label fx:id="Discount_Branch" layoutX="225.0" layoutY="276.0" prefHeight="17.0" prefWidth="52.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;" text="     0.0" textFill="RED" />
+                              <Label fx:id="Delivery_cost" layoutX="289.0" layoutY="227.0" prefHeight="19.0" prefWidth="54.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;" text="      0.0" textFill="RED" />
+                              <Label fx:id="Discount_lable" layoutX="339.0" layoutY="277.0" prefHeight="19.0" prefWidth="51.0" style="-fx-border-color: #4f8255; -fx-border-radius: 10;" text="      0.0" textFill="RED" />
+                              <Separator layoutX="220.0" layoutY="190.0" prefHeight="3.0" prefWidth="214.0" />
+                              <Label fx:id="Choose" layoutX="210.0" layoutY="337.0" prefHeight="18.0" prefWidth="141.0" text="Choose Branch and DateTime!" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

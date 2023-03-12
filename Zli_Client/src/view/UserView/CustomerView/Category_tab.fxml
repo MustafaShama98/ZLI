@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="389.0" prefWidth="597.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.customer.CategoryTabController">
+                     <top>
+                        <Pane prefWidth="590.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="0.0" prefWidth="590.0" stylesheets="@../../tableStyle.css">
+                                 <children>
+                                    <Button fx:id="birthdayBtn" mnemonicParsing="false" onAction="#birthday_tab_Click" prefHeight="43.0" prefWidth="148.0" text="Birthday">
+                                       <graphic>
+                                          <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/customer/cake.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="weddingBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#wedding_tab_clicked" prefHeight="45.0" prefWidth="147.0" text="Wedding">
+                                       <graphic>
+                                          <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/customer/wedding%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                  <Button fx:id="MOMBtn" mnemonicParsing="false" onAction="#MOM_tab_clicked" prefHeight="38.0" prefWidth="147.5" text="MOM">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/customer/MOM.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="GraduationBtn" mnemonicParsing="false" onAction="#Graduation_tab_clicked" prefHeight="38.0" prefWidth="147.5" text="Graduation">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/customer/Graduation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="364.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TableView fx:id="birthdayTable" prefHeight="333.0" prefWidth="590.0">
+                                <columns>
+                                  <TableColumn fx:id="Name_Birthday" prefWidth="120.0" text="Name" />
+                  <TableColumn fx:id="Details_Birthday" prefWidth="217.0" text="Details" />
+                  <TableColumn fx:id="Color_Birthday" prefWidth="89.0" text="Color" />
+                                  <TableColumn fx:id="Type_Birthday" minWidth="6.0" prefWidth="82.0" text="Type" />
+                  <TableColumn fx:id="Price_Birthday" prefWidth="88.0" text="Price" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="weddingTable" prefHeight="334.0" prefWidth="590.0">
+                                <columns>
+                                  <TableColumn fx:id="Name_Wedding" prefWidth="120.0" text="Name" />
+                  <TableColumn fx:id="Details_Wedding" prefWidth="217.0" text="Details" />
+                  <TableColumn fx:id="Color_Wedding" prefWidth="89.0" text="Color" />
+                                  <TableColumn fx:id="Type_Wedding" prefWidth="82.0" text="Type" />
+                  <TableColumn fx:id="Price_Wedding" prefWidth="88.0" text="Price" />
+                                </columns>
+                              </TableView>
+            <TableView fx:id="MOMTable" prefHeight="333.0" prefWidth="590.0">
+               <columns>
+                  <TableColumn fx:id="Name_MOM" prefWidth="120.0" text="Name" />
+                  <TableColumn fx:id="Details_MOM" prefWidth="217.0" text="Details" />
+                  <TableColumn fx:id="Color_MOM" prefWidth="89.0" text="Color" />
+                  <TableColumn fx:id="Type_MOM" minWidth="6.0" prefWidth="82.0" text="Type" />
+                  <TableColumn fx:id="Price_MOM" prefWidth="88.0" text="Price" />
+               </columns>
+            </TableView>
+            <TableView fx:id="GraduationTable" prefHeight="337.0" prefWidth="590.0">
+               <columns>
+                  <TableColumn fx:id="Name_Graduation" prefWidth="120.0" text="Name" />
+                  <TableColumn fx:id="Details_Graduation" prefWidth="217.0" text="Details" />
+                  <TableColumn fx:id="Color_Graduation" prefWidth="89.0" text="Color" />
+                  <TableColumn fx:id="Type_Graduation" prefWidth="82.0" text="Type" />
+                  <TableColumn fx:id="Price_Graduation" prefWidth="88.0" text="Price" />
+               </columns>
+            </TableView>
+                           </children>
+                        </AnchorPane>
+                     </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#AddToCart" text="Add to cart" BorderPane.alignment="CENTER" />
+   </bottom>
+                  </BorderPane>

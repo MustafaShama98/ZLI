@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="436.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.customer.CreateYourBouquteController">
+   <children>
+      <BorderPane prefHeight="436.0" prefWidth="1038.0" style="-fx-background-color: white;">
+         <center>
+      				<BorderPane fx:id="borderPane_Main_Center" prefHeight="422.0" prefWidth="613.0">
+               <top>
+                  <Pane prefHeight="42.0" prefWidth="825.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="backBtn" layoutX="623.0" minWidth="54.0" mnemonicParsing="false" onAction="#Click_Back" prefHeight="50.0" prefWidth="59.0" style="-fx-background-color: transparent;" translateX="170.0">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Text fill="#325737" layoutX="282.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bouqute Maker" underline="true" wrappingWidth="204.35897827148438">
+                           <font>
+                              <Font name="Baskerville Old Face" size="26.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="boq_name" layoutX="14.0" layoutY="4.0" text="Enter name!" textFill="RED" visible="false" />
+                     </children>
+                  </Pane>
+               </top>
+               <left>
+                  <Pane prefHeight="386.0" prefWidth="224.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ScrollPane prefHeight="343.0" prefWidth="225.0">
+                           <content>
+                              <VBox fx:id="VboxList" prefHeight="337.0" prefWidth="207.0" spacing="5.0">
+                                 <padding>
+                                    <Insets left="7.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="AddtoCart" contentDisplay="BOTTOM" layoutX="70.0" layoutY="350.0" mnemonicParsing="false" onAction="#ClicktoCart" style="-fx-background-color: #4f8255; -fx-background-radius: 20;" stylesheets="@../../style.css" text="Add To Cart" textFill="WHITE">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
+                        <HBox layoutX="74.7841796875" layoutY="-15.75" translateX="-60.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Bouqute:" underline="true" wrappingWidth="77.44775390625">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="13.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="custom_Bouqute_Name" layoutX="-50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="121.0" promptText="Custom Name" translateX="5.0" translateY="-6.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </left>
+               <center>
+                  <BorderPane prefHeight="382.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <Pane fx:id="centerPane" focusTraversable="true" prefHeight="386.0" prefWidth="545.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label fx:id="Select" text="Select !" textFill="RED" visible="false">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="AddtoBouqute" layoutX="190.0" layoutY="350.0" mnemonicParsing="false" onAction="#ClicktoBouqute" style="-fx-background-color: #4f8255; -fx-background-radius: 20;" stylesheets="@../../style.css" text="Add To Bouqute" textFill="WHITE">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TableView fx:id="CatalogTable" layoutX="-1.0" layoutY="1.0" prefHeight="344.0" prefWidth="652.0">
+                                 <columns>
+                                    <TableColumn fx:id="CodeID" minWidth="0.0" prefWidth="58.0" text="Code" />
+                                    <TableColumn fx:id="NameID" minWidth="0.0" prefWidth="88.0" text="Name" />
+                                    <TableColumn fx:id="DetailsID" prefWidth="162.0" text="Details" />
+                                    <TableColumn fx:id="CategoryID" minWidth="0.0" prefWidth="73.0" text="Category" />
+                                    <TableColumn fx:id="TypeID" minWidth="0.0" prefWidth="70.0" text="Type" />
+                                    <TableColumn fx:id="OccasionsID" minWidth="0.0" prefWidth="72.0" text="Occasions" />
+                                    <TableColumn fx:id="ColorID" minWidth="0.0" prefWidth="79.0" text="Color" />
+                                    <TableColumn fx:id="PriceID" minWidth="0.0" prefWidth="49.0" text="Price" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </Pane>
+                     </center>
+                  </BorderPane>
+               </center>
+      				</BorderPane>
+         </center>
+         <left>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="155.0" style="-fx-background-color: #4f8255;" stylesheets="@../../../../../Zli-Client/src/view/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="185.0" fitWidth="106.0" layoutX="23.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Zli-Client/src/images/flower.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#fffdc5" layoutX="23.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Color" underline="true" wrappingWidth="95.43650507926941">
+                     <font>
+                        <Font name="Baskerville Old Face" size="14.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="ChooseColor" layoutX="19.0" layoutY="56.0" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #4f8255; -fx-background-radius: 20; -fx-border-color: #fffdc5; -fx-border-radius: 20; -fx-text-fill: #fffdc5 !important;" stylesheets="@../../style.css" />
+                  <Text fill="#fffdc5" layoutX="21.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Price:" underline="true">
+                     <font>
+                        <Font name="Baskerville Old Face" size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="DoneBtn" layoutX="39.0" layoutY="181.0" mnemonicParsing="false" onAction="#ClickDone" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #4f8255; -fx-background-radius: 10; -fx-border-color: #fffdc5; -fx-border-radius: 20;" text="Submit" textFill="#fffdc5">
+                     <font>
+                        <Font name="Baskerville Old Face" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="MinID" alignment="CENTER" layoutX="11.0" layoutY="127.0" prefHeight="25.0" prefWidth="51.0" promptText="min" style="-fx-border-radius: 15; -fx-border-color: #fffdc5; -fx-background-color: transparent; -fx-background-radius: 15; -fx-text-fill: #fffdc5;">
+                     <font>
+                        <Font name="Baskerville Old Face" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="MaxID" alignment="CENTER" layoutX="89.0" layoutY="127.0" prefHeight="25.0" prefWidth="51.0" promptText="max" style="-fx-border-radius: 15; -fx-border-color: #fffdc5; -fx-background-color: transparent; -fx-background-radius: 15; -fx-text-fill: #fffdc5;">
+                     <font>
+                        <Font name="Baskerville Old Face" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="Select1" layoutX="-12.0" layoutY="-8.0" text="Select !" textFill="#8d0b0b" translateX="60.0" translateY="240.0" visible="false">
+                     <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NotFound" layoutX="30.0" layoutY="232.0" text="Not Found!" textFill="#8d0b0b" visible="false">
+                     <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</Pane>

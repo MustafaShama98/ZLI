@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.users.CeoController.CeoUIController">
+   <children>
+      <AnchorPane layoutX="-12.0" layoutY="-12.0" minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="166.0" style="-fx-background-color: #4f8255;">
+         <children>
+            <Text fill="#fffdc5" layoutX="38.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Portal" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="Baskerville Old Face" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="UserLabel" layoutX="40.0" layoutY="47.0" prefHeight="18.0" prefWidth="102.0" textFill="#fffdc5">
+               <font>
+                  <Font name="Baskerville Old Face" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="reportsBtn" layoutX="13.0" layoutY="105.0" mnemonicParsing="false" onAction="#select_reports" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-border-width: 1.5; -fx-background-radius: 20; -fx-border-radius: 2030; -fx-border-color: #fffdc5;" text="View Monthly Reports" textFill="#fffdc5" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="8.0" />
+            <Button fx:id="QuartleyReportsBtn" contentDisplay="CENTER" layoutX="13.0" layoutY="150.0" mnemonicParsing="false" onAction="#select_Quartley_reports" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-border-width: 1.5; -fx-background-radius: 20; -fx-border-radius: 2030; -fx-border-color: #fffdc5;" text=" Single Quartley Report" textFill="#fffdc5" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="8.0" />
+            <Button fx:id="twoQuartleyeports" contentDisplay="CENTER" layoutX="13.0" layoutY="195.0" mnemonicParsing="false" onAction="#select_two_Quartley_reports" prefHeight="29.0" prefWidth="145.0" style="-fx-background-color: transparent; -fx-border-width: 1.5; -fx-background-radius: 20; -fx-border-radius: 2030; -fx-border-color: #fffdc5;" text=" Two Quartley Reports" textFill="#fffdc5" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="8.0" />
+            <ImageView fitHeight="198.0" fitWidth="115.0" layoutX="32.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../git/Zli-Client/src/images/flower.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="149.0" layoutY="-6.0" minHeight="0.0" minWidth="0.0" prefHeight="422.0" prefWidth="589.0" style="-fx-background-color: white;">
+         <children>
+            <BorderPane prefHeight="415.0" prefWidth="590.0">
+               <top>
+                  <ButtonBar prefHeight="42.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+                     <buttons>
+                        <MenuButton fx:id="menuBtn" contentDisplay="TEXT_ONLY" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: #5f8c64; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: green;" text="Menu" textFill="#fffdc5" translateX="-10.0">
+                           <items>
+                              <MenuItem fx:id="logoutBtn" mnemonicParsing="false" onAction="#logOut_click" text="Logout" />
+                           </items>
+                        </MenuButton>
+                     </buttons>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </ButtonBar>
+               </top>
+               <center>
+                  <Pane fx:id="rootPane" prefHeight="353.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane prefHeight="363.0" prefWidth="590.0" />
+                        <Separator prefHeight="2.0" prefWidth="590.0" />
+                        <fx:include fx:id="MonthlyReportsTab" layoutX="10.0" layoutY="26.0" source="ViewReport_CEO.fxml" translateX="20.0" translateY="-25.0" />
+                         <fx:include fx:id="SingleQuarterReort" layoutY="20.0" source="singleQuarterReport.fxml" translateX="15.0" translateY="-15.0" />
+                          <fx:include fx:id="quartleyReportsTab" source="ViewQuarterReportsCeo.fxml" />
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
